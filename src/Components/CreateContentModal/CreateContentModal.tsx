@@ -15,10 +15,10 @@ interface modalProps {
 // controlled component
 function CreateContentModal({ open, onClose, onSuccess }: modalProps) {
 
-	const titleRef = useRef<HTMLInputElement>()
-	const linkRef = useRef<HTMLInputElement>()
-	const contentRef = useRef<HTMLInputElement>()
-	const categoryRef = useRef<HTMLSelectElement>()
+	const titleRef = useRef<HTMLInputElement>(null)
+	const linkRef = useRef<HTMLInputElement>(null)
+	const contentRef = useRef<HTMLInputElement>(null)
+	const categoryRef = useRef<HTMLSelectElement>(null)
 
 	async function CreateContentModal(){
 		const title = titleRef.current?.value;
@@ -82,7 +82,7 @@ function CreateContentModal({ open, onClose, onSuccess }: modalProps) {
 export default CreateContentModal;
 
 interface inputFormProps {
-	reference?:React.RefObject<HTMLInputElement>;
+	reference?:React.RefObject<HTMLInputElement | null>;
 	placeholder: string;
 }
 

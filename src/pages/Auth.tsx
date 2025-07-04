@@ -26,8 +26,8 @@ export default Auth;
 function SignUp() {
 	const navigate =useNavigate()
 
-	const usernameRef = useRef<HTMLInputElement>();
-	const passwordRef = useRef<HTMLInputElement>();
+	const usernameRef = useRef<HTMLInputElement>(null);
+	const passwordRef = useRef<HTMLInputElement>(null);
 	async function signUp() {
 		const username = usernameRef.current?.value;
 		const password = passwordRef.current?.value;
@@ -78,8 +78,8 @@ function SignUp() {
 function SignIn() {
 	const navigate = useNavigate()
 
-	const usernameRef = useRef<HTMLInputElement>()
-	const passwordRef = useRef<HTMLInputElement>()
+	const usernameRef = useRef<HTMLInputElement>(null)
+	const passwordRef = useRef<HTMLInputElement>(null)
 
 	
 	async function signIn() {
