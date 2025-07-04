@@ -1,69 +1,136 @@
-# React + TypeScript + Vite
+# ClipSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClipSync (SecondBrain) is a modern, full-stack web application for saving, organizing, and sharing your favorite links, notes, tweets, and YouTube videos.  
+Built with React, Tailwind CSS, Express, MongoDB, and JWT authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **User Authentication** (Sign Up / Sign In)
+- **Dashboard** to view and manage your saved content
+- **Add Content**: Save YouTube videos, Tweets, links, and notes
+- **Responsive UI**: Works on desktop, tablet, and mobile
+- **Delete Content**: Remove items from your collection
+- **Share**: Easily share your saved content
+- **Modern UI**: Built with Tailwind CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1. **Clone the repository**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/DebakantPradhan/secondBrain.git
+cd secondBrain
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. **Backend Setup**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd secondBrain
+npm install
 ```
+
+- Create a `.env` file in the backend root:
+
+    ```
+    db_username=yourMongoUser
+    db_password=yourMongoPassword
+    DB_NAME=second-brain
+    APP_NAME=SecondBrain
+    MONGODB_URL=mongodb+srv://yourMongoUser:yourMongoPassword@cluster0.mongodb.net/second-brain?retryWrites=true&w=majority&appName=SecondBrain
+    JWT_SECRET=yourSecret
+    ACCESS_TOKEN_EXPIRY=15m
+    REFRESH_TOKEN_EXPIRY=7d
+    ```
+
+- **Start the backend:**
+
+    ```bash
+    npm run dev
+    ```
+
+---
+
+### 3. **Frontend Setup**
+
+```bash
+cd ../secondBrainFrontend
+npm install
+```
+
+- Create a `.env` file in the frontend root:
+
+    ```
+    VITE_BACKEND_URL=http://localhost:8000
+    ```
+
+- **Start the frontend:**
+
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 🌐 Deployment
+
+### **Backend**
+- Deploy to [Render](https://render.com/) or similar Node.js host.
+- Set all environment variables in the Render dashboard (do not upload your `.env` file).
+- **Do not set `PORT`**; Render sets it automatically.
+
+### **Frontend**
+- Deploy to [Netlify](https://netlify.com/) or [Vercel](https://vercel.com/).
+- Set `VITE_BACKEND_URL` in your host's environment variables to your backend's public URL.
+- For client-side routing, add a `_redirects` file (Netlify) or `vercel.json` (Vercel):
+
+    **Netlify**:  
+    ```
+    /*    /index.html   200
+    ```
+
+    **Vercel**:
+    ```json
+    {
+      "rewrites": [
+        { "source": "/(.*)", "destination": "/" }
+      ]
+    }
+    ```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, TypeScript, Tailwind CSS, Axios, React Router
+- **Backend:** Node.js, Express, MongoDB, Mongoose, JWT
+- **Deployment:** Render (backend), Netlify/Vercel (frontend)
+
+---
+
+## 📸 Screenshots
+
+### Landing Page
+![Landing Page](./screenshots/landing.png)
+
+### Sign In / Sign Up
+![Sign In](./screenshots/signin.png)
+![Sign Up](./screenshots/signup.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+---
+
+## 📄 License
+
+MIT
+
+---
+
+## 🙏 Credits
+
+Made by [Debakant Pradhan](https://github.com/DebakantPradhan)
