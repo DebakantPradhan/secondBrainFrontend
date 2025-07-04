@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Button from '../Components/Button/Button';
 import { InputForm } from '../Components/CreateContentModal/CreateContentModal';
-import { BACKEND_URL,FRONTEND_URL } from '../BACKEND_URL';
+import { BACKEND_URL } from '../BACKEND_URL';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
