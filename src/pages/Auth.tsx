@@ -3,7 +3,7 @@ import Button from '../Components/Button/Button';
 import { InputForm } from '../Components/CreateContentModal/CreateContentModal';
 import { BACKEND_URL } from '../BACKEND_URL';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 interface authType {
 	signup?: boolean;
@@ -65,9 +65,7 @@ function SignUp() {
 				<div className="pt-4 m-2 text-sm">
 					<p>
 						Already an user ?{' '}
-						<a className="pl-2.5 text-purple-500 font-semibold" href={`/signin`}>
-							SignIn
-						</a>
+						<Link className="pl-2.5 text-purple-500 font-semibold" to="/signin">SignIn</Link>
 					</p>
 				</div>
 			</div>
@@ -123,9 +121,7 @@ function SignIn() {
 				<div className="pt-4 m-2 text-sm">
 					<p>
 						Don't have an account ?{' '}
-						<a className="pl-2.5 text-purple-500 font-semibold" href={`/signup`}>
-							SignUp
-						</a>
+						<Link className="pl-2.5 text-purple-500 font-semibold" to="/signup">SignUp</Link>
 					</p>
 				</div>
 			</div>
