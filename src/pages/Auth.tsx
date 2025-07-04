@@ -65,7 +65,7 @@ function SignUp() {
 				<div className="pt-4 m-2 text-sm">
 					<p>
 						Already an user ?{' '}
-						<a className="pl-2.5 text-purple-500 font-semibold" href={`${FRONTEND_URL}/signin`}>
+						<a className="pl-2.5 text-purple-500 font-semibold" href={`/signin`}>
 							SignIn
 						</a>
 					</p>
@@ -123,7 +123,7 @@ function SignIn() {
 				<div className="pt-4 m-2 text-sm">
 					<p>
 						Don't have an account ?{' '}
-						<a className="pl-2.5 text-purple-500 font-semibold" href={`${FRONTEND_URL}/signup`}>
+						<a className="pl-2.5 text-purple-500 font-semibold" href={`/signup`}>
 							SignUp
 						</a>
 					</p>
