@@ -114,14 +114,14 @@ npm install
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing Page](./screenshots/landing.png)
+![Landing Page](./public/landing.png)
 
 ### Sign In / Sign Up
-![Sign In](./screenshots/signin.png)
-![Sign Up](./screenshots/signup.png)
+![Sign In](./public/signin.png)
+![Sign Up](./public/signup.png)
 
 ### Dashboard
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./public/dashboard.png)
 
 ---
 
