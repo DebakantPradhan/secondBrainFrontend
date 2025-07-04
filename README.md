@@ -22,13 +22,16 @@ Built with React, Tailwind CSS, Express, MongoDB, and JWT authentication.
 ### 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/DebakantPradhan/secondBrain.git
-cd secondBrain
+git clone https://github.com/DebakantPradhan/secondBrainFrontend.git
+cd secondBrainFrontend
+npm install
+npm run dev
 ```
 
 ### 2. **Backend Setup**
 
 ```bash
+git clone https://github.com/DebakantPradhan/secondBrain.git
 cd secondBrain
 npm install
 ```
