@@ -5,7 +5,7 @@ Built with React, Tailwind CSS, Express, MongoDB, and JWT authentication.
 
 ---
 
-## ✨ Features
+## Features
 
 - **User Authentication** (Sign Up / Sign In)
 - **Dashboard** to view and manage your saved content
@@ -17,7 +17,7 @@ Built with React, Tailwind CSS, Express, MongoDB, and JWT authentication.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. **Clone the repository**
 
@@ -106,7 +106,7 @@ npm install
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React, TypeScript, Tailwind CSS, Axios, React Router
 - **Backend:** Node.js, Express, MongoDB, Mongoose, JWT
@@ -114,7 +114,7 @@ npm install
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Landing Page
 ![Landing Page](./public/landing.png)
@@ -128,12 +128,12 @@ npm install
 
 ---
 
-## 📄 License
+## License
 
 MIT
 
 ---
 
-## 🙏 Credits
+## Credits
 
 Made by [Debakant Pradhan](https://github.com/DebakantPradhan)
